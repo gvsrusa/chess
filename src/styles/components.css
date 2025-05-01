@@ -1,0 +1,351 @@
+/* Component-specific styles for Chess Web Application */
+
+/* Navigation */
+.app-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray-800);
+  color: var(--light-text);
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.app-logo {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+}
+
+.app-logo a {
+  color: var(--light-text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-md);
+}
+
+.nav-links li a {
+  color: var(--gray-300);
+  text-decoration: none;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed);
+}
+
+.nav-links li a:hover {
+  color: var(--light-text);
+  background-color: var(--gray-700);
+}
+
+.nav-links li.active a {
+  color: var(--light-text);
+  background-color: var(--primary-color);
+}
+
+.nav-button {
+  background-color: transparent;
+  color: var(--gray-300);
+  border: none;
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed);
+}
+
+.nav-button:hover {
+  color: var(--light-text);
+  background-color: var(--gray-700);
+}
+
+.nav-button.sign-out:hover {
+  background-color: var(--danger-color);
+}
+
+/* Chess Components */
+.chess-board {
+  margin: var(--spacing-md) 0;
+}
+
+.chess-controls {
+  margin: var(--spacing-md) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.control-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed);
+}
+
+.reset-btn {
+  background-color: var(--warning-color);
+  color: var(--gray-900);
+}
+
+.reset-btn:hover {
+  background-color: #e0a800;
+}
+
+.undo-btn {
+  background-color: var(--gray-600);
+}
+
+.undo-btn:hover {
+  background-color: var(--gray-700);
+}
+
+.game-over-message {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--gray-200);
+  border-radius: var(--border-radius);
+  color: var(--gray-800);
+  font-weight: bold;
+}
+
+.game-info {
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md);
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-300);
+}
+
+.current-turn {
+  margin-bottom: var(--spacing-md);
+}
+
+.move-history {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.check-status {
+  margin-top: var(--spacing-md);
+}
+
+.check-message {
+  color: var(--danger-color);
+  font-weight: bold;
+}
+
+/* Game Room Layout */
+.game-room {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.game-status {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-lg);
+}
+
+.your-turn {
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+.opponent-turn {
+  color: var(--warning-color);
+}
+
+.game-actions {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+/* Authentication Forms */
+.auth-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: bold;
+}
+
+.auth-button {
+  width: 100%;
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+.auth-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.social-login {
+  margin-top: var(--spacing-lg);
+  border-top: 1px solid var(--gray-300);
+  padding-top: var(--spacing-md);
+}
+
+.social-button {
+  width: 100%;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.social-button.google {
+  background-color: #ea4335;
+}
+
+.social-button.github {
+  background-color: #171515;
+}
+
+/* Profile */
+.profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.user-info {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius);
+}
+
+.profile-form {
+  margin-bottom: var(--spacing-lg);
+}
+
+.update-button {
+  background-color: var(--success-color);
+}
+
+.update-button:hover {
+  background-color: #146c43;
+}
+
+.sign-out-button {
+  width: 100%;
+  background-color: var(--danger-color);
+}
+
+.sign-out-button:hover {
+  background-color: #b02a37;
+}
+
+/* Lobby */
+.lobby-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.lobby-actions {
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.create-game-button {
+  background-color: var(--success-color);
+}
+
+.create-game-button:hover {
+  background-color: #146c43;
+}
+
+.available-games {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-sm);
+  padding: var(--spacing-lg);
+}
+
+.games-list {
+  list-style: none;
+  padding: 0;
+}
+
+.game-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.game-item:last-child {
+  border-bottom: none;
+}
+
+.join-game-button {
+  background-color: var(--primary-color);
+}
+
+.join-game-button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .game-container {
+    flex-direction: row;
+  }
+  
+  .game-sidebar {
+    width: 300px;
+  }
+  
+  .chess-board {
+    flex: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .app-navigation {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
